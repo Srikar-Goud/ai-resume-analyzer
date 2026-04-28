@@ -113,7 +113,7 @@ const Upload = () => {
                                 <FileUploader onFileSelect={handleFileSelect} />
                             </div>
 
-                            <button className="primary-button" type="submit">
+                            <button className="primary-button animate-pulse" type="submit">
                                 Analyze Resume
                             </button>
                         </form>
