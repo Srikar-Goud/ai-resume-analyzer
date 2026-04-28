@@ -37,6 +37,7 @@ const file = acceptedFiles[0] || null;
         </div>
 
         {file ? (
+            <div className="uploader-selected-file truncate" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center space-x-3">
                 <img src="/images/pdf.png" alt="PDF Icon" className="size-10" />
                 <div>
@@ -47,6 +48,13 @@ const file = acceptedFiles[0] || null;
                     {formatSize(file.size)}</p>
                 </div>
             </div>
+            <div>
+                <button className="p-2 cursor-pointer" onClick={() => onFileSelect?.(null)}>
+                    <img src="/icons/cross.svg" alt="Remove File" className="size-4"  />
+                </button>
+            </div>
+            </div>
+            
         ) : (
             <div>
                 <p className="text-lg text-gray-500">
